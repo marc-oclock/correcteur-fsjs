@@ -1,0 +1,25 @@
+{
+  "name": "gamehub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/O-clock-FS-JS/GameHub.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/O-clock-FS-JS/GameHub/issues"
+  },
+  "homepage": "https://github.com/O-clock-FS-JS/GameHub#readme",
+  "dependencies": {
+    "csv-parser": "^2.3.3",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "node-csv": "^0.1.2"
+  }
+}

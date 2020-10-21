@@ -1,0 +1,112 @@
+/** reset **/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* True Styling */
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+header h1 {
+  margin: 0;
+  font-family: fantasy;
+  font-size: 5rem;
+  padding: 50px;
+  text-align: center;
+  color: white!important;
+  background:  rgb(17, 131, 146);
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.5), 0px 0px 10px rgba(0,0,0,0.5), 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+header nav{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  flex-direction: column;
+}
+
+header nav ul {
+  background: rgba(255,255,255,0.8);
+  color: gb(243, 205, 18);
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  height: 50px;
+}
+
+header nav ul li {
+  text-align:center;
+  padding: 15px;
+  transition: all ease .5s;
+  font-size: 1rem;
+}
+
+header nav ul li:hover {
+  font-size: 1.2rem;
+  text-shadow: 0px 10px 4px rgba(0,0,0,0.5);
+}
+
+h3 {
+  text-align: center;
+  line-height: 3rem;
+}
+
+.container {
+  display: flex;
+}
+
+.student {
+  background-color: rgb(216, 216, 216); 
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 3px;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  box-shadow: #AAA 2px 2px 2px;
+}
+.title {
+  font-size: 1.3em;
+}
+.buttons {
+  display: flex;
+  margin: 3px;
+}
+.button {
+  border-radius: 3px;
+  color: rgb(17, 131, 146);
+  margin: 3px;
+  border: rgb(17, 131, 146) solid 3px;
+}
+.button a {
+  display: block;
+  padding: 10px;
+}
+
+.button:hover {
+  color: white;
+  margin: 3px;
+  background-color: rgb(17, 131, 146);
+  transition-property: all;
+  transition: 0.3s;
+}
+
+
+li {
+  margin: 5px;
+  display: inline-block;
+  list-style: none;
+  width: 300px;
+}

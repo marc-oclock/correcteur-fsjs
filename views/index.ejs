@@ -1,0 +1,35 @@
+<%- include('partials/header') %>
+
+<main>
+  <h1>Etudiants</h1>
+
+  <div class="container">
+    <ul>
+      <% for (let student of students) { %>
+        <li>
+          <div class="student">
+            <div class="title">
+              <%=student.prenom%> <%=student.nom%>
+            </div>
+           <div class="buttons">
+            <div class="button">
+              <a href="parcours/<%=student.pseudo%>" target="_blank">
+                Parcours
+              </a>
+            </div>
+            <div class="button">
+              <a href="https://github.com/O-clock-Nemo/S01-parcours-html-css-<%=student.pseudo%>" target="_blank">
+                Depot
+              </a>
+            </div>
+          </div>
+           </div>
+        </li>
+      <% } %>
+    </ul>
+  </div>
+
+
+</main>
+
+<%- include('partials/footer') %>

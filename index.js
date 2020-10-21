@@ -11,7 +11,7 @@ app.use( express.static('public'));
 // const students = require('./games.json');
 // app.locals.students = students;
 
-app.get('/', (request, response) => {
+app.get('/', (req, res) => {
   students = [];
   
   fs.createReadStream('students_nemo.csv')
@@ -22,26 +22,30 @@ app.get('/', (request, response) => {
     .on('end', () => {
       console.log('CSV file successfully processed');
       console.log(students);
-      response.render('index', {students: students});
+      res.render('index', {students: students});
     });
 });
 
-app.get('/parcours/:pseudo', (request, response) => {
-  const path = '/depots/S01-parcours-html-css-' + request.params.pseudo  + '/html/index.html';
+app.get('/parcours/:pseudo', (req, res) => {
+  app.locals.pseudo = req.params.pseudo;
+  const path = '/depots/S01-parcours-html-css-' + req.params.pseudo  + '/';
   app.use(express.static(path));
   console.log(path);
-  response.sendFile(__dirname + path);
-  //response.redirect("file:///D:/014_oclock/promos/nemo/s01/S01-parcours-html-css-Fonzy-dev/html/index.html");
+  res.sendFile(__dirname + path + 'html/index.html');
+  //res.redirect("file:///D:/014_oclock/promos/nemo/s01/S01-parcours-html-css-Fonzy-dev/html/index.html");
 });
 
-// app.get('/game/:gameName', (request, response) => {
-//   let goodGame;
-//   goodGame = games.filter( (x) => x.name == request.params.gameName ).pop();
-//   if (!goodGame) {
-//     response.statusCode = 404;
-//   }
-//   response.render('game', {game: goodGame});
-// });
+app.get('/css/:style_file', (req, res) => {
+  const path = '/depots/S01-parcours-html-css-' + app.locals.pseudo  + '/';
+  console.log(path);
+  res.sendFile(__dirname + path + 'css/' + req.params.style_file);
+});
+
+app.get('/img/:img_file', (req, res) => {
+  const path = '/depots/S01-parcours-html-css-' + app.locals.pseudo  + '/';
+  console.log(path);
+  res.sendFile(__dirname + path + 'img/' + req.params.img_file);
+});
 
 app.listen(5050, () => {
   console.log("listening on 5050");

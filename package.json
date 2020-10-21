@@ -1,21 +1,21 @@
 {
-  "name": "gamehub",
+  "name": "correcteur-fsjs-s01",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/O-clock-FS-JS/GameHub.git"
+    "url": "git+https://github.com/marc-oclock/correcteur-fsjs-s01.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/O-clock-FS-JS/GameHub/issues"
+    "url": "https://github.com/marc-oclock/correcteur-fsjs-s01/issues"
   },
-  "homepage": "https://github.com/O-clock-FS-JS/GameHub#readme",
+  "homepage": "https://github.com/marc-oclock/correcteur-fsjs-s01#readme",
   "dependencies": {
     "csv-parser": "^2.3.3",
     "ejs": "^2.7.1",

@@ -1,4 +1,4 @@
-# correcteur-fsjs-s01
+# correcteur-fsjs
 outil d'aide à la correction du parcours S01 du socle FSJS
 
 
